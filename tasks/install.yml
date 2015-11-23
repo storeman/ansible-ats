@@ -1,0 +1,7 @@
+---
+- name: Add ATS Repository
+  apt_repository: repo="{{ ats_repo }}" update_cache=yes
+  
+- name: Ensure ATS is installed.
+  apt: "name=trafficserver state=installed"
+  
